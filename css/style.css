@@ -31,6 +31,11 @@ body nav .navbar-nav a {
 body nav .navbar-nav a:hover {
   color: #ff8013 !important;
 }
+.navbar-brand img {
+    max-height: 40px; /* Adjust this to fit your navbar height */
+    width: auto; /* Maintains aspect ratio */
+    margin-right: 10px; /* Adds some space between icon and text if needed */
+}
 body nav .navbar-nav .btn-danger {
   background: #ff8013;
   border-color: #ff8013;
