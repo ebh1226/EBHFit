@@ -398,4 +398,9 @@ footer::before {
   .footer2 .form-box {
     margin-top: 0 !important;
   }
+
+  .small-logo {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Keeps aspect ratio */
+}
 }
