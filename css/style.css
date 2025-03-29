@@ -183,17 +183,10 @@ a, a:hover {
   position: relative;
   padding: 50px 0;
   margin: 70px 0;
-  background: url("../images/gexBgBands.jpg");
+  background: url("../images/backgroundCave.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
-}
-
-.fh5co-content-box .trainers img {
-    width: 300px; /* Adjust as needed */
-    height: auto; /* Keeps aspect ratio */
-    display: block; /* Optional: prevents extra space below the image */
-    margin: 0 auto; /* Centers the image */
 }
 
 .fh5co-content-box .trainers .bg-50 {
