@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EBHfit - Admin Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/client.css">
+</head>
+<body>
+<div class="container-fluid pl-0 pr-0">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container"> 
+      <!-- Brand --> 
+      <a class="navbar-brand mr-auto" href="index.html"><img src="images/EBHFITicon.png" alt="EBHfit" /></a> 
+      
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
+      
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link active" href="admin.html">Admin Dashboard</a> </li>
+        </ul>
+        <ul class="navbar-nav ml-5">
+          <li class="nav-item"> <a class="nav-link btn btn-danger logout-btn" href="#">Logout</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="dashboard-container">
+    <div class="container">
+      <div class="dashboard-header">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="wow bounceInLeft">Admin <span>Dashboard</span></h2>
+          </div>
+          <div class="col-md-4 text-right">
+            <p class="wow bounceInRight">Logged in as: <span>EBHfit Admin</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dashboard-section">
+        <div class="admin-controls wow bounceInUp">
+          <button class="btn btn-outline-danger" id="add-client-btn">Add New Client</button>
+          <button class="btn btn-outline-danger" id="create-workout-btn">Create Workout</button>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="wow bounceInLeft">Clients</h3>
+            <div class="client-list wow bounceInLeft">
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                  Sarah Johnson
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  Mike Peterson
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  Emma Thompson
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  Daniel Williams
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  Jessica Martinez
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-8">
+            <h3 class="wow bounceInRight">Client Details</h3>
+            <div class="workout-card wow bounceInRight">
+              <div class="card-header">
+                Sarah Johnson - Profile
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Email:</strong> sarah.j@example.com</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Join Date:</strong> March 15, 2025</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p><strong>Focus Area:</strong> Strength Training</p>
+                    <p><strong>Workouts Completed:</strong> 8</p>
+                    <p><strong>Last Activity:</strong> April 8, 2025</p>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12">
+                    <div class="client-actions">
+                      <button class="btn btn-outline-danger">Edit Profile</button>
+                      <button class="btn btn-outline-danger">View Workouts</button>
+                      <button class="btn btn-outline-danger">Message Client</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="mt-4 wow bounceInRight">Current Workout Plan</h3>
+            <div class="workout-card wow bounceInRight">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Week 1: Building Foundation</span>
+                <div>
+                  <button class="btn btn-sm btn-outline-light">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger">Delete</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="workout-details">
+                  <p><strong>Focus:</strong> Strength & Endurance</p>
+                  <p><strong>Duration:</strong> 45-60 minutes per session</p>
+                  <p><strong>Frequency:</strong> 3-4 times per week</p>
+                </div>
+                
+                <h5>Day 1: Upper Body</h5>
+                <div class="workout-exercise">
+                  <p><strong>Push-ups:</strong> 3 sets of 10 reps</p>
+                  <p><strong>Notes:</strong> Focus on proper form, keep core engaged</p>
+                </div>
+                <div class="workout-exercise">
+                  <p><strong>Dumbbell Rows:</strong> 3 sets of 12 reps</p>
+                  <p><strong>Notes:</strong> Use 15lb weights, maintain straight back</p>
+                </div>
+                
+                <button class="btn btn-outline-danger mt-3">Add Exercise</button>
+              </div>
+            </div>
+            
+            <div class="workout-card mt-4 wow bounceInRight">
+              <div class="card-header">
+                Create New Workout
+              </div>
+              <div class="card-body">
+                <form class="form-dark">
+                  <div class="form-group">
+                    <label for="workout-title">Workout Title</label>
+                    <input type="text" class="form-control" id="workout-title" placeholder="e.g., Week 2: Progressive Overload">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="workout-focus">Focus</label>
+                    <input type="text" class="form-control" id="workout-focus" placeholder="e.g., Hypertrophy">
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="workout-duration">Duration (minutes)</label>
+                      <input type="number" class="form-control" id="workout-duration" placeholder="e.g., 60">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="workout-frequency">Frequency (per week)</label>
+                      <input type="number" class="form-control" id="workout-frequency" placeholder="e.g., 4">
+                    </div>
+                  </div>
+                  
+                  <h5 class="mt-4">Exercises</h5>
+                  <div id="exercises-container">
+                    <div class="exercise-entry mb-3 p-3" style="background: #222; border-radius: 5px;">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label>Exercise Name</label>
+                          <input type="text" class="form-control" placeholder="e.g., Bench Press">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Sets x Reps</label>
+                          <input type="text" class="form-control" placeholder="e.g., 3 x 12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Notes</label>
+                        <textarea class="form-control" rows="2" placeholder="Instructions or tips for the exercise"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button type="button" class="btn btn-outline-light" id="add-exercise-btn">+ Add Exercise</button>
+                  
+                  <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-danger">Save Workout</button>
+                    <button type="button" class="btn btn-outline-light">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div
