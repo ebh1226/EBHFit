@@ -27,38 +27,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function setupLoginForm() {
     const loginForm = document.getElementById('loginForm');
-    
+
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        const email = document.getElementById('email').value;
+
+        const email = document.getElementById('email').value.trim().toLowerCase();
         const password = document.getElementById('password').value;
-        
-        // In a real application, this would validate with a backend
-        // For now, we'll simulate a successful login
-        
-        if (email && password) {
-            // Store user info in localStorage (in a real app, you'd store a token)
+
+        // Define valid client profiles
+        const validClients = {
+            "rrichiemh@gmail.com": { password: "TATIN1998", name: "Richie Herrera" },
+            "jherrerarva04@gmail.com": { password: "JJ2004", name: "Jacqueline Herrera" },
+            "dientista1@gmail.com": { password: "PAPI1960", name: "Ricardo Herrera" }
+        };
+
+        // Check if the login is for an admin (this logic is already in place)
+        if (email.includes('admin')) {
             const userData = {
-                name: "Sarah Johnson", // This would come from the server
+                name: "EBHfit Admin",
                 email: email,
                 lastLogin: new Date().toISOString(),
-                isAdmin: email.includes('admin') // Simple check for demo
+                isAdmin: true
             };
-            
             localStorage.setItem('ebhfit_user', JSON.stringify(userData));
-            
-            // Redirect based on user type
-            if (userData.isAdmin) {
-                window.location.href = 'admin.html';
-            } else {
+            window.location.href = 'admin.html';
+        }
+        // Validate the client credentials using the validClients object
+        else if (validClients[email]) {
+            if (validClients[email].password === password) {
+                const userData = {
+                    name: validClients[email].name,
+                    email: email,
+                    lastLogin: new Date().toISOString(),
+                    isAdmin: false
+                };
+                localStorage.setItem('ebhfit_user', JSON.stringify(userData));
                 window.location.href = 'dashboard.html';
+            } else {
+                alert("Incorrect password for " + email);
             }
         } else {
-            alert('Please enter your email and password');
+            alert("Invalid email or profile not recognized");
         }
     });
 }
+
 
 function setupDashboard() {
     // Get user data
